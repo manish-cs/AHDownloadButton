@@ -46,11 +46,13 @@ final class HighlightableRoundedButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.layer.cornerRadius = 8
         updateColors()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.layer.cornerRadius = 8
         updateColors()
     }
     
@@ -64,7 +66,7 @@ final class HighlightableRoundedButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = frame.height / 2
+//        layer.cornerRadius = frame.height / 2
     }
     
 }
